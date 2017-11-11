@@ -19,14 +19,68 @@
             </div>
         </section>
         <div class="main hidden">
-        <header> <div class="right floated user-name">  </div> </header>
+
+        <header> <div class="right floated user-name">  </div>
+        </header>
+
         <section class="content">
           <audio src="song.mp3.aac"></audio>
-        </section>
-        <footer>
+          <div class="list-headers">
+     <div> Title </div>
+     <div> Artist </div>
+     <div> Album </div>
+     <div> Duration </div>
+   </div>
+     <div class="song-list">
+     <div  id="song1" class="song">
+     <span class="song-name"></span>
+     <span class="song-artist"></span>
+     <span class="song-album"></span>
+     <span class="song-length"></span>
+     </div>
+
+     <div  id="song2" class="song">
+     <span class="song-name"></span>
+     <span class="song-artist"></span>
+     <span class="song-album"></span>
+     <span class="song-length"></span>
+     </div>
+
+     <div  id="song3" class="song">
+     <span class="song-name"></span>
+     <span class="song-artist"></span>
+     <span class="song-album"></span>
+     <span class="song-length"></span>
+     </div>
+
+   </div>
+   <div class="current-song-wrapper">
+        <!-- <img src="" class=current-song-image>-->
+         <div>
+             <p class="current-song-name">gbdfvs</p>
+             <p class="current-song-album">bgdfs</p>
+         </div>
+   </div>
+         </section>
+       <footer>
         <div class="controls">
+
+      <div class="player-buttons">
         <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
-        </div>
+       </div>
+
+        <div class="progress-wrapper">
+
+                     <span class="time-elapsed"> </span>
+
+                   <div class="player-progress">
+                            <div class="progress-filled"> </div>
+                        </div>
+                        <span class="song-duration"></span>
+
+                    </div>
+                <!--<div class="song-name"></div>-->
+                </div>
         </footer>
         </div>
     </div>
