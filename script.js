@@ -43,12 +43,17 @@ setInterval(timer, 1000);
 
   $('.clickable').on('click', toggleMusic);
 
-  const songList = ['audio1234', 'akshay', 'utkarsh' ];
+
+
+  const songList = ['AUDIO 1', 'AUDIO 2', 'AUDIO 3' ];
    const songArtist = ['artist #1', 'artist #2', 'artist #3' ];
-    const albumList = ['hjh', 'aaa', 'uuuu' ];
+    const albumList = ['123', '456', '789' ];
      const durationList = ['02:51', '02:40', '03:24' ];
+
   for(let i=0 ; i <songList.length;i++) {
     let index  = i +1;
+  //  var name = '#song' + (i+1);
+    //var song = $(name);
     var song =$('#song' + index);
     song.find('.song-name').text(songList[i]);
       song.find('.song-artist').text(songArtist[i]);
@@ -61,11 +66,12 @@ setInterval(timer, 1000);
     var audio= $('audio')[0];
   function somefunction(id,index) {
     $(id).on('click', function () {
-  if(audio.src.search(fileNames[index])===-1){
+  if(audio.src.search(fileNames[index])==-1){
       audio.src = fileNames[index];
       $('.current-song-name').text(songList[index].name);
-        $('.current-song-album').text(songList[index].album);
+     $('.current-song-album').text(songList[index].album);
       toggleMusic();
+
     } else{
       toggleMusic();
     }
