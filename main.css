@@ -17,11 +17,15 @@ h1 {
     border: 0;
     margin: 0;
 }
+h3{
+  margin-left:-60px;
+}
 
 .wrapper {
     height: 100%;
     width: 100%;
-    background-color: #BBB;
+    background: url("https://previews.123rf.com/images/valru/valru1011/valru101100013/8144799-musical-background-notes-Stock-Photo-music.jpg");
+    background-size: cover;
 }
 
 .welcome-screen {
@@ -31,32 +35,52 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size:30px;
+    font-family:helvetica;
 }
-
+.left-margin{
+  margin-left: 680px;
+}
+.input-wrapper{
+  margin-left:60px;
+ }
+ .added-width{
+   height:28px;
+   width: 220px !important;
+ }
+ .width-added{
+   height:28px;
+   width:60px;
+ }
+.song:hover{
+  color:brown;
+}
 .main {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     color: white;
-    background-color: #1f1f1f;
+    background: url("https://images-na.ssl-images-amazon.com/images/I/11NFhhNHPvL._SX355_.jpg");
 }
 
 .main header {
     height: 80px;
-    background-color: #282828;
+    background: url("https://i.pinimg.com/236x/b5/2b/bf/b52bbf17929c8da830fed3f2705d123c--dark-blue-color-blue-colors.jpg");
     padding: 1rem;
     color: #FFF;
 }
 
 .main .content {
     flex:1;
-    background-color: #1f1f1f;
+    background: url("https://images-na.ssl-images-amazon.com/images/I/11NFhhNHPvL._SX355_.jpg");
+
+
 }
 
 .main footer {
     min-height: 80px;
-    background-color: #282828;
+    background: url("https://i.pinimg.com/236x/b5/2b/bf/b52bbf17929c8da830fed3f2705d123c--dark-blue-color-blue-colors.jpg");
     padding-top: 1rem;
 }
 
@@ -72,7 +96,13 @@ h1 {
 }
 
 .right.floated {
+    font-family: helvetica;
     float: right;
+    font-size: 30px;
+}
+.widthh{
+  height:30px;
+  width:90px;
 }
 
 .clickable {
@@ -171,7 +201,7 @@ h1 {
 }
 .current-song-wrapper{
   position: absolute;
-  bottom: 0;
+  bottom 0;
   display: flex;
 }
 .current-song-image{

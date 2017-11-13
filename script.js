@@ -38,8 +38,16 @@ setInterval(timer, 1000);
     if(e.keyCode==32||80) {
        toggleMusic();
      }
+
     });
+
   });
+  $('header>button').on('click', function (e) {
+       e.preventDefault();
+        $('.main').addClass('hidden');
+        $('.welcome-screen').removeClass('hidden');
+
+});
 
   $('.clickable').on('click', toggleMusic);
 
