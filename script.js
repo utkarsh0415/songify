@@ -73,11 +73,13 @@ setInterval(timer, 1000);
   const fileNames = ['song.mp3.aac','song1.mp3.mp3','song2.mp3.mp3'];
     var audio= $('audio')[0];
   function somefunction(id,index) {
+    console.log(id,index);
     $(id).on('click', function () {
-  if(audio.src.search(fileNames[index])==-1){
+  if(audio.src.search(fileNames[index])=== -1){
       audio.src = fileNames[index];
-      $('.current-song-name').text(songList[index].name);
-     $('.current-song-album').text(songList[index].album);
+      //console.log(songList[index]);
+      $('.current-song-name').text(songList[index]);
+     $('.current-song-album').text(albumList[index]);
       toggleMusic();
 
     } else{

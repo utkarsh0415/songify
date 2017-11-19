@@ -26,7 +26,7 @@
         <div class="main hidden">
 
         <header> <div class="right floated user-name">  </div>
-      <button class="widthh">Back</button>
+      <input type="button" value="LogOut" onClick="window.location.reload()">
         </header>
 
         <section class="content">
@@ -61,6 +61,8 @@
      </div>
 
    </div>
+
+  <div class="playall"><i class="fa fa-play" aria-hidden="true"></i></div>
    <div class="current-song-wrapper">
         <!-- <img src="" class=current-song-image>-->
          <div>
@@ -73,7 +75,11 @@
         <div class="controls">
 
       <div class="player-buttons">
+       <i class="fa fa-step-backward" aria-hidden="true"></i>
         <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+        <i class="fa fa-step-forward" aria-hidden="true"></i>
+
+        <!--<i class="fa fa-step-forward" aria-hidden="true"></i>-->
        </div>
 
         <div class="progress-wrapper">
