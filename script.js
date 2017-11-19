@@ -1,5 +1,5 @@
 window.onload = function() {
-
+//Play  Pause a song
   function toggleMusic() {
     const audio= $('audio')[0];
     if(audio.paused) {
@@ -11,7 +11,7 @@ window.onload = function() {
     }
   }
 
-
+// Current time and  duration of song
   function formatTime(time) {
     const min = Math.floor(time/60);
     const sec = Math.floor(time%60);
@@ -24,69 +24,58 @@ function  timer() {
   $('.time-elapsed').text(currentTime);
   $('.song-duration').text(duration);
 }
-
 timer();
 setInterval(timer, 1000);
+
+//Main page
   $('.input-wrapper form').on('submit', function (e) {
     e.preventDefault();
     $('.welcome-screen').addClass('hidden');
-
     const name= $('#name-input').val();
     $('.main .user-name').html('Welcome,  '+name);
     $('.main').removeClass('hidden');
+
     $(document).on('keypress',function(e) {
-    if(e.keyCode==32||80) {
+    if(e.keyCode==32||e.keyCode==80||e.keyCode==112) {
        toggleMusic();
      }
-
-    });
-
   });
-  $('header>button').on('click', function (e) {
-       e.preventDefault();
-        $('.main').addClass('hidden');
-        $('.welcome-screen').removeClass('hidden');
-
 });
 
   $('.clickable').on('click', toggleMusic);
 
-
-
-  const songList = ['AUDIO 1', 'AUDIO 2', 'AUDIO 3' ];
-   const songArtist = ['artist #1', 'artist #2', 'artist #3' ];
-    const albumList = ['123', '456', '789' ];
-     const durationList = ['02:51', '02:40', '03:24' ];
+  const songList = ['Pappleen', '3 peg','Mere Rashke Qamar','Chatur Naar'];
+  const songArtist = ['Diljit Dosanjh', 'SharryMaan', 'Rahat Fatehali', 'Neha Kakkar,Udit Narayan'];
+  const albumList = ['Sardaarjii 2', '3 peg PagalWorld.com', 'Baadshaho', 'Machine'];
+  const durationList = ['02:40', '03:24','03:40','03:41'];
 
   for(let i=0 ; i <songList.length;i++) {
     let index  = i +1;
-  //  var name = '#song' + (i+1);
-    //var song = $(name);
     var song =$('#song' + index);
     song.find('.song-name').text(songList[i]);
       song.find('.song-artist').text(songArtist[i]);
        song.find('.song-album').text(albumList[i]);
         song.find('.song-length').text(durationList[i]);
+}
 
-  }
-
-  const fileNames = ['song.mp3.aac','song1.mp3.mp3','song2.mp3.mp3'];
+  const fileNames = ['song1.mp3.mp3','song2.mp3.mp3','song3.mp3.mp3','song4.mp3.mp3'];
     var audio= $('audio')[0];
+//Click effect on the Songs
   function somefunction(id,index) {
-    console.log(id,index);
     $(id).on('click', function () {
-  if(audio.src.search(fileNames[index])=== -1){
+       $('.current-song-name').text(songList[0]);
+       $('.current-song-album').text(albumList[0]);
+     if(audio.src.search(fileNames[index])=== -1){
       audio.src = fileNames[index];
-      //console.log(songList[index]);
       $('.current-song-name').text(songList[index]);
      $('.current-song-album').text(albumList[index]);
       toggleMusic();
-
-    } else{
+    }else{
       toggleMusic();
     }
     });
   }
+
   for(let i=1; i<=songList.length;i++) {
     somefunction('#song' + i, i-1);
   }
