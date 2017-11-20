@@ -27,20 +27,25 @@ function  timer() {
 timer();
 setInterval(timer, 1000);
 
-//Main page
+                           //MAIN PAGE
   $('.input-wrapper form').on('submit', function (e) {
     e.preventDefault();
     $('.welcome-screen').addClass('hidden');
     const name= $('#name-input').val();
     $('.main .user-name').html('Welcome,  '+name);
     $('.main').removeClass('hidden');
-
+// BY DEFAULT DETAILS OF SONG
+      audio.src = fileNames[0];
+      $('.current-song-name').text(songList[0]);
+      $('.current-song-album').text(albumList[0]);
+      $('.current-song-wrapper img').attr('src',images[0]);
+//KEY PRESS FUNCTION
     $(document).on('keypress',function(e) {
     if(e.keyCode==32||e.keyCode==80||e.keyCode==112) {
        toggleMusic();
      }
   });
-});
+});                      //MAIN PAGE CLOSED
 
   $('.clickable').on('click', toggleMusic);
 
@@ -59,14 +64,17 @@ setInterval(timer, 1000);
 }
 
   const fileNames = ['song1.mp3.mp3','song2.mp3.mp3','song3.mp3.mp3','song4.mp3.mp3'];
+  const images = ['pic1.jpg.jpg','pic2.jpg.jpg','pic3.jpg.jpg','pic4.jpg.jpg'];
     var audio= $('audio')[0];
-//Click effect on the Songs
+
+                       //        FUNCTION
   function somefunction(id,index) {
+//CLICK EFFECT ON SONG
     $(id).on('click', function () {
-       $('.current-song-name').text(songList[0]);
-       $('.current-song-album').text(albumList[0]);
      if(audio.src.search(fileNames[index])=== -1){
+//DETAILS UPDATION OF SONG
       audio.src = fileNames[index];
+      $('.current-song-wrapper img').attr('src',images[index]);
       $('.current-song-name').text(songList[index]);
      $('.current-song-album').text(albumList[index]);
       toggleMusic();
@@ -74,7 +82,7 @@ setInterval(timer, 1000);
       toggleMusic();
     }
     });
-  }
+  }                       //FUNCTION CLOSED
 
   for(let i=1; i<=songList.length;i++) {
     somefunction('#song' + i, i-1);
