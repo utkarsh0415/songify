@@ -1,8 +1,4 @@
 window.onload = function() {
-$.ajax({
-  
-});
-
 
 
 //Play  Pause a song
