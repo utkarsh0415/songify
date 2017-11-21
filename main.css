@@ -59,7 +59,7 @@ h3{
     display: flex;
     flex-direction: column;
     color: white;
-    background: url("https://images-na.ssl-images-amazon.com/images/I/11NFhhNHPvL._SX355_.jpg");
+    background-color:black;
 }
 
 .main header {
@@ -70,8 +70,11 @@ h3{
 }
 
 .main .content {
+
     flex:1;
-    background: url("https://images-na.ssl-images-amazon.com/images/I/11NFhhNHPvL._SX355_.jpg");
+    background-color:orange;
+    color:red;
+
 
 
 }
@@ -192,45 +195,40 @@ h3{
     text-align: right;
 }
 .content{
-  position: relative;
 }
 .current-song-wrapper{
   position: absolute;
   bottom 0;
   display: flex;
+  margin-top:100px;
 }
 .current-song-image{
   height: 100px;
   width: 100px;
-  margin-left: 10px;
- border-radius: 50%;
-  margin-top: 180px;
+
+  border-radius: 50%;
+
   border-color: black;
 }
 .current-song-name{
   font-size: 1.4rem;
-  margin-top: 200px;
-  margin-bottom: 0;
-  margin-left: 10px;
+
+
+
 }
 .current-song-album{
-  margin-left: 20px;
+
 
 }
 .fa{
   margin-left: 10px;
   margin-right: 10px;
 }
-.addsong{
-  margin-bottom: 13px;
-  margin-top: 5px;
-  width:150px;
-
+.playall{
+  margin-top:10px;
+  margin-left: 10px;
 }
-.addsongs-css{
-  margin-left: 15px;
-  margin-bottom: 20px;
-}
-h2{
-  margin-left: 15px;
+.total{
+  margin-top:10px;
+  margin-left: 8px;
 }
