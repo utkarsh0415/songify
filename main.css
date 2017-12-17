@@ -20,7 +20,6 @@ h1 {
 h3{
   margin-left:-60px;
 }
-
 .wrapper {
     height: 100%;
     width: 100%;
@@ -144,20 +143,16 @@ h3{
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
-
 .list-headers > div {
     width: 150px;
     display: inline-block;
 }
-
 .list-headers > div:first-child {
     width: 330px;
 }
-
 .list-headers > div:last-child {
     text-align: right;
 }
-
 .song-list .song {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -177,16 +172,12 @@ h3{
 .song > span:first-child {
     width: 330px;
 }
-
 .song .song-duration {
     text-align: right;
 }
-
 .song-list .song:hover {
     background: url("https://i.pinimg.com/236x/b5/2b/bf/b52bbf17929c8da830fed3f2705d123c--dark-blue-color-blue-colors.jpg");
 }
-
-
 .song-length {
     text-align: right;
 }
